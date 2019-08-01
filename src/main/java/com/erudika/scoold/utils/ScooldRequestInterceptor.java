@@ -190,7 +190,9 @@ public class ScooldRequestInterceptor extends HandlerInterceptorAdapter {
 		Locale currentLocale = utils.getCurrentLocale(utils.getLanguageCode(request));
 		modelAndView.addObject("currentLocale", currentLocale);
 		modelAndView.addObject("lang", utils.getLang(currentLocale));
-		modelAndView.addObject("langDirection", utils.isLanguageRTL(currentLocale.getLanguage()) ? "RTL" : "LTR");
+//		modelAndView.addObject("langDirection", utils.isLanguageRTL(currentLocale.getLanguage()) ? "RTL" : "LTR");
+		modelAndView.addObject("langDirection", "LTR");
+
 		// Pagination
 		// check for AJAX pagination requests
 		if (utils.isAjaxRequest(request) && (utils.param(request, "page") ||

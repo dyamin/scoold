@@ -56,7 +56,7 @@ public abstract class Post extends Sysprop {
 	private String body;
 	@Stored @NotBlank @Size(min = 6, max = 255)
 	private String title;
-	@Stored @NotEmpty @Size(min = 1, max = 5)
+	@Stored @NotEmpty @Size(min = 1, max = 10)
 	private List<String> tags;
 
 	@Stored private Long viewcount;
